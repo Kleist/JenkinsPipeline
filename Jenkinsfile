@@ -11,11 +11,11 @@ node {
 
 stage "Coverage & System test"
 
-parallel {
+parallel (
   node {
     bat: 'python coverage.py'
-  }
+  },
   node {
     bat: 'python systemtest.py'
   }
-}
+)
