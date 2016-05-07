@@ -1,5 +1,6 @@
 stage "Build"
 node {
+  checkout scm
   bat: python build.py
 }
 
