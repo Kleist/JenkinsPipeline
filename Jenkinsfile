@@ -12,10 +12,12 @@ node {
 stage "Coverage & System test"
 
 parallel (
-  node {
-    bat: 'python coverage.py'
-  },
-  node {
-    bat: 'python systemtest.py'
-  }
+  coverage: {
+    node {
+      bat: 'python coverage.py'
+    }},
+  systemtest: {
+    node {
+      bat: 'python systemtest.py'
+    }}
 )
